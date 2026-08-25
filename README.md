@@ -77,6 +77,19 @@ codex --profile grok-go
 codex --profile deepseek-flash-go
 ```
 
+### Codex Desktop model selector
+
+Custom-provider profiles work in the Codex CLI, but Codex Desktop does not currently list them in its model selector. The selector shows the hosted Codex models only, so `deepseek-v4-flash` and `grok-4.5` will not appear there even when the proxy is configured correctly.
+
+Use the profiles from a terminal instead:
+
+```bash
+codex --profile deepseek-flash-go
+codex --profile grok-go
+```
+
+If a future Codex Desktop release adds custom-provider profile selection, the same proxy and profile configuration can be reused.
+
 ## Compatibility and limitations
 
 - The DeepSeek route supports streamed Responses requests and Codex function/custom tool calls.
